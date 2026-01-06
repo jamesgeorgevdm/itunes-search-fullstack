@@ -10,7 +10,7 @@ The iTunes Search App is a React-Express application that allows users to search
 - **Filter Results:** Select a media type to narrow the search or choose "All" to see all results.
 - **Favourites List:** Add and remove items from a favourites list. This list is temporary and does not persist after the app is closed.
 - **Attractive UI:** The application features a clean and user-friendly interface.
-- **Secure API:** The app uses JSON Web Tokens (JWT) to secure API communication.
+- **JWT-protected API routes:** The app uses JSON Web Tokens (JWT) to secure API communication.
 
 ## **Technologies Used**
 
@@ -22,30 +22,46 @@ The iTunes Search App is a React-Express application that allows users to search
 - **Styling:** CSS with custom styles
 - **Environment Configuration:** dotenv
 
-## **Setup Instructions**
+## **Architecture Overview**
+- Client–server architecture
+- React frontend communicates with an Express REST API
+- API routes protected using JWT middleware
+- Server proxies requests to the iTunes Search API
 
-Follow the steps below to set up the application on your local machine:
+## **Security Notes**
+- JWTs are used to protect API routes
+- Tokens are generated server-side and verified via middleware
+- This project demonstrates route protection concepts rather than full user authentication
 
-### **Prerequisites**
 
-1. Install [Node.js](https://nodejs.org/) (ensure you have npm installed).
 
-### **Installation**
+## Getting Started
 
-1. **Download the folder containing files relating to this project**
-   cd itunes-search-app
+### Prerequisites
+- Node.js (v18+ recommended)
+- npm
 
-2. **Install dependencies with the following code**
-   cd backend
+### Installation
+
+1. Clone the repository
+2. Install backend dependencies:
+   cd server
    npm install
-   cd ../frontend
+
+3. Create a `.env` file with the following code:
+
+   SECRET_KEY=your_secret_key
+   (Update "your_secret_key" with your own keyword)
+
+4. Start the backend:
+   node server.js
+
+5. Install frontend dependencies:
+   cd ../client
    npm install
 
-3. **Start the backend server**
-   In the backend directory, input the code: node server.js
-
-4. **Start the React front-end**
-   In the frontend directory, input the code: npm start
+6. Start the frontend:
+   npm start
 
 ## **Usage Instructions**
 
@@ -53,3 +69,6 @@ Follow the steps below to set up the application on your local machine:
 2. Click the "Search" button to fetch results from the iTunes API.
 3. Browse the results, and clock "Add to Favourites" to save an item to your favourites list.
 4. View or remove items from the favourites list on the right side of the screen.
+
+> This project was completed prior to being uploaded to GitHub as part of a portfolio.
+
