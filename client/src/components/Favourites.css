@@ -1,0 +1,41 @@
+.favourites-container {
+  width: 250px;
+  padding: 20px;
+  background-color: #f3e5f5; /* Light purple background */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 90vh; /* Prevents it from growing too large vertically */
+  overflow-y: auto;
+  position: relative;
+}
+
+.favourites-container ul {
+  list-style-type: none; /* Removes the bullet points */
+}
+
+.favourites-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.favourite-item {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #d1c4e9; /* Light border */
+  border-radius: 5px;
+  background-color: #ede7f6; /* Slightly darker purple */
+  color: #311b92; /* Darker text for readability */
+}
+
+.favourite-item:hover {
+  background-color: #d1c4e9;
+  transition: background-color 0.3s ease;
+}
+
+.favourites-empty {
+  text-align: center;
+  color: #7b1fa2;
+  font-style: italic;
+}
