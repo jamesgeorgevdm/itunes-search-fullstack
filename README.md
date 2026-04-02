@@ -34,17 +34,20 @@ The iTunes Search App is a full-stack React + Express application that allows us
 - Tokens are generated server-side and verified via middleware
 - This project demonstrates route protection concepts rather than full user authentication
 
-## Environment Variables
+## Live Demo:
 
-Create a `.env` file in the `server` directory based on `.env.example`:
-SECRET_KEY=your_secret_key_here
+- https://itunes-search-fullstack.onrender.com/
 
-
-## Getting Started
+## Local Development - Getting Started
 
 ### Prerequisites
 - Node.js (v18+ recommended)
 - npm
+
+## Environment Variables
+
+Create a `.env` file in the `server` directory based on `.env.example`:
+SECRET_KEY=your_secret_key_here
 
 ### Installation
 
